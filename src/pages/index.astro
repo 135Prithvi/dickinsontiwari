@@ -1,16 +1,19 @@
 ---
-import Layout from '../layouts/Page.astro'
-import Container from '../components/Container.astro';
-import BlogPostsList from '../components/BlogPostsList.astro';
+import Layout from "../layouts/Page.astro";
+import Container from "../components/Container.astro";
+import BlogPostsList from "../components/BlogPostsList.astro";
 
-const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
-	(a, b) => new Date(b.frontmatter.publishedAt).valueOf() - new Date(a.frontmatter.publishedAt).valueOf()
+const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
+  (a, b) =>
+    new Date(b.frontmatter.publishedAt).valueOf() -
+    new Date(a.frontmatter.publishedAt).valueOf()
 );
 
 const seo = {
-  title: 'Simple Blog | A template by Little Sticks',
-  description: 'A simple blog template for Astro by Little Sticks',
-}
+  title: "How to - MY key Tenets of making money online",
+  description:
+    "My key Tenets of making money online by programming, coding, freelancing, digital markting, use chatgpt to make website, use chatgpt to make ads,use chatgpt to impress your girlfriend or wife, how to use lexica.art to generate images, dall-e-2, midjourney etc. To maximize your potential to make money online. I myself has made over $10,000 in 6 months. So if I can do it then you can too.",
+};
 ---
 
 <style>
@@ -25,9 +28,8 @@ const seo = {
 <Layout seo={seo}>
   <Container>
     <div class="home-hero-text__container">
-      <h1 class="fade-in">Blog</h1>
+      <h1 class="fade-in">My Tenets</h1>
     </div>
-    <BlogPostsList posts={posts}/>
+    <BlogPostsList posts={posts} />
   </Container>
 </Layout>
-

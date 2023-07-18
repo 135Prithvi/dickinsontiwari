@@ -1,7 +1,7 @@
 export const settings = {
-  site: 'https://simple-blog.littlesticks.dev',
+  site: `https://${process.env.VERCEL_URL}`,
   name: 'Simple Blog',
-  title: 'Site title',
-  description: 'Site description',
-  showLittleSticksPlug: true,
+  title: 'How to -',
+  description: 'My key Tenets of making money online by programming, coding, freelancing, digital markting, use chatgpt to make website...',
+  showLittleSticksPlug: false,
 }
